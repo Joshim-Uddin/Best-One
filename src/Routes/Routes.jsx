@@ -1,12 +1,12 @@
 import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from '../Pages/Home';
 import Main from '../Layout/Main';
 import Product from '../Pages/Product';
 import Dashboard from '../Pages/Dashboard';
 import Customer from '../Pages/Customer';
 import Login from '../Pages/Login';
 import Cart from '../Pages/Cart';
+import Home from '../Pages/Home/Home';
 
 const router = createBrowserRouter([
     {
