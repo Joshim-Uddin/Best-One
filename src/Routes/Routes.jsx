@@ -5,30 +5,41 @@ import Main from '../Layout/Main';
 import Product from '../Pages/Product';
 import Dashboard from '../Pages/Dashboard';
 import Customer from '../Pages/Customer';
+import Login from '../Pages/Login';
+import Cart from '../Pages/Cart';
 
 const router = createBrowserRouter([
     {
         path: '/',
+        element : <Login />
+    },
+    {
+        path: '/home',
         element: <Main />,
         children: [
             {
-                path: '/',
+                path: '/home',
                 element: <Home />
             },
             {
-                path: '/product',
+                path: 'product',
                 element: <Product />
             },
             {
-                path: '/dashboard',
+                path: 'dashboard',
                 element: <Dashboard />
             },
             {
-                path: '/customer',
+                path: 'customer',
                 element: <Customer />
+            },
+            {
+                path: 'cart',
+                element: <Cart />
             }
         ]
-    }
+    },
+    
 ])
 const Routes = () => {
     return (

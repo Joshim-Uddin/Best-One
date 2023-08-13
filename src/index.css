@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Pacifico&family=Shrikhand&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -73,4 +74,23 @@ button:focus-visible {
 } */
 .footer-title{
   @apply text-2xl font-semibold
+}
+.custom{
+  color: white;
+  background: dodgerblue;
+    background: linear-gradient(to left, tomato 50%, yellow 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+    padding: 0.5rem;
+}
+.custom:hover {
+  background-position: left;
+  color:red;
+}
+.navbar {
+  background-color: transparent;
+}
+
+.navbar.colorChange {
+  background-color: #000;
 }
