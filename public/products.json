@@ -86,7 +86,7 @@
         "specification": "Polarized lenses, metal frame",
         "company": "Sunglass Co.",
         "yearOfManufacture": 2022,
-        "imageUrl": "https://i.ibb.co/Qn27fh4/sunglass-one.png",
+        "image_url": "https://i.ibb.co/Qn27fh4/sunglass-one.png",
         "stockAmount": 100,
         "type": "sunglass"
       },
@@ -99,7 +99,7 @@
         "specification": "Wrap-around design, UV protection",
         "company": "Eyewear Enterprises",
         "yearOfManufacture": 2023,
-        "imageUrl": "https://i.ibb.co/njTw4QH/sunglass-two.png",
+        "image_url": "https://i.ibb.co/njTw4QH/sunglass-two.png",
         "stockAmount": 75,
         "type": "sunglass"
       },
@@ -112,7 +112,7 @@
         "specification": "Cat eye shape, acetate frame",
         "company": "Retro Eyewear Co.",
         "yearOfManufacture": 2021,
-        "imageUrl": "https://i.ibb.co/tm0G1xB/sunglass-three.png",
+        "image_url": "https://i.ibb.co/tm0G1xB/sunglass-three.png",
         "stockAmount": 120,
         "type": "sunglass"
       },
@@ -125,7 +125,7 @@
         "specification": "Wayfarer style, gradient lenses",
         "company": "Trendy Optics",
         "yearOfManufacture": 2023,
-        "imageUrl": "https://i.ibb.co/bdkn7gh/sunglass-five.png",
+        "image_url": "https://i.ibb.co/bdkn7gh/sunglass-five.png",
         "stockAmount": 90,
         "type": "sunglass"
       },
@@ -138,7 +138,7 @@
         "specification": "Round lenses, metal frame",
         "company": "Nostalgic Eyewear",
         "yearOfManufacture": 2022,
-        "imageUrl": "https://i.ibb.co/sHC6sjM/sunglass-four.png",
+        "image_url": "https://i.ibb.co/sHC6sjM/sunglass-four.png",
         "stockAmount": 150,
         "type": "sunglass"
       },
@@ -151,7 +151,7 @@
         "specification": "Sports design, shatterproof lenses",
         "company": "Performance Eyewear",
         "yearOfManufacture": 2023,
-        "imageUrl": "https://i.ibb.co/PtYYJ7k/sunglass-six.png",
+        "image_url": "https://i.ibb.co/PtYYJ7k/sunglass-six.png",
         "stockAmount": 60,
         "type": "sunglass"
       },
@@ -164,7 +164,7 @@
         "specification": "Genuine leather tote with spacious interior and gold accents.",
         "company": "FashionCrafters",
         "yearOfManufacture": 2022,
-        "imageUrl": "https://i.ibb.co/nDRgCqp/bag-one.png",
+        "image_url": "https://i.ibb.co/nDRgCqp/bag-one.png",
         "stockAmount": 50,
         "type": "bag"
       },
@@ -177,7 +177,7 @@
         "specification": "Compact crossbody clutch with sleek design and adjustable strap.",
         "company": "FashionFusion",
         "yearOfManufacture": 2023,
-        "imageUrl": "https://i.ibb.co/6Jj48k6/bag-two.png",
+        "image_url": "https://i.ibb.co/6Jj48k6/bag-two.png",
         "stockAmount": 30,
         "type": "bag"
       },
@@ -190,7 +190,7 @@
         "specification": "Quilted faux leather shoulder bag with chain strap and elegant pattern.",
         "company": "EliteAccessories",
         "yearOfManufacture": 2022,
-        "imageUrl": "https://i.ibb.co/M7rs63r/bag-three.png",
+        "image_url": "https://i.ibb.co/M7rs63r/bag-three.png",
         "stockAmount": 25,
         "type": "bag"
       },
@@ -203,7 +203,7 @@
         "specification": "Fringe-adorned bucket bag with a bohemian vibe and adjustable strap.",
         "company": "ArtisanCrafts",
         "yearOfManufacture": 2023,
-        "imageUrl": "https://i.ibb.co/7Sh9Sts/bag-four.png",
+        "image_url": "https://i.ibb.co/7Sh9Sts/bag-four.png",
         "stockAmount": 40,
         "type": "bag"
       },
@@ -216,7 +216,7 @@
         "specification": "Satin evening clutch with intricate embellishments and detachable chain.",
         "company": "ElegantAffairs",
         "yearOfManufacture": 2022,
-        "imageUrl": "https://i.ibb.co/hcGVL3T/bag-five.png",
+        "image_url": "https://i.ibb.co/hcGVL3T/bag-five.png",
         "stockAmount": 20,
         "type": "bag"
       },
@@ -229,7 +229,7 @@
         "specification": "Contemporary satchel bag with multiple compartments and adjustable strap.",
         "company": "CityVogue",
         "yearOfManufacture": 2023,
-        "imageUrl": "https://i.ibb.co/0t7Zbq9/bag-six.png",
+        "image_url": "https://i.ibb.co/0t7Zbq9/bag-six.png",
         "stockAmount": 35,
         "type": "bag"
       },
@@ -242,7 +242,7 @@
         "specification": "Vintage-inspired leather backpack with front pockets and rustic charm.",
         "company": "TimelessGoods",
         "yearOfManufacture": 2022,
-        "imageUrl": "https://i.ibb.co/d6yXL80/bag-seven.png",
+        "image_url": "https://i.ibb.co/d6yXL80/bag-seven.png",
         "stockAmount": 15,
         "type": "bag"
       },
@@ -255,7 +255,7 @@
         "specification": "Elegant tassel-adorned bag with versatile styling options and timeless design.",
         "company": "ChicCouture",
         "yearOfManufacture": 2023,
-        "imageUrl": "https://i.ibb.co/ysktCYk/bag-eight.png",
+        "image_url": "https://i.ibb.co/ysktCYk/bag-eight.png",
         "stockAmount": 28,
         "type": "bag"
       },
@@ -268,7 +268,7 @@
         "specification": "Streamlined leather clutch with a modern look and detachable wristlet.",
         "company": "SimplicityDesigns",
         "yearOfManufacture": 2022,
-        "imageUrl": "https://i.ibb.co/0Dnyn9p/bag-nine.png",
+        "image_url": "https://i.ibb.co/0Dnyn9p/bag-nine.png",
         "stockAmount": 22,
         "type": "bag"
       },

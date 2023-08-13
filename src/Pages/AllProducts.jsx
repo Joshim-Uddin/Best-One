@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import useProducts from '../Hooks/useProducts';
 import Product from './Home/Product';
 
+
 const AllProducts = () => {
     const [allProducts, setAllProducts] = useState([])
-    const [category, setCategory] = useState([])
     const [filterText, setFilterText] = useState([])
     const handleChange = (e)=>{
         const value = e.target.value;
@@ -16,7 +16,6 @@ const AllProducts = () => {
         .then((data)=> setAllProducts(data));
     }, []) 
   const filtered =  allProducts.filter(product=>(product.type).match(filterText))
-  console.log(filtered)
     return (
         <>
         <h2 className='text-center md:text-4xl text-2xl font-bold text-white'>Our Products</h2>
