@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Main from '../Layout/Main';
 import Dashboard from '../Pages/Dashboard';
@@ -41,13 +41,9 @@ const router = createBrowserRouter([
     },
     
 ])
-export const openContext = createContext()
 const Routes = () => {
-    const [open, setOpen] = useState(false)
-    const contextInfo = {open, setOpen}
-    console.log(open)
     return (
-        <openContext.Provider value={contextInfo}><RouterProvider router={router} ></RouterProvider></openContext.Provider>
+        <RouterProvider router={router} ></RouterProvider>
     );
 };
 
