@@ -16,12 +16,12 @@ const Banner = () => {
         
       
     return (
-        <div  className='max-h-screen mx-auto text-violet-600 py-5 grid md:grid-cols-2 grid-cols-1 gap-5 items-center justify-between'>
-             <h2 className='text-center md:text-5xl text-2xl font-bold w-10/12 mx-auto'>
+        <div  className='max-h-screen mx-auto text-violet-600 py-5 grid md:grid-cols-2 grid-cols-1 gap-5 items-center justify-between md:py-10'>
+             <h2 className='text-center md:text-5xl text-2xl font-bold w-10/12 mx-auto leading-10'>
       <Typewriter onInit={(typewriter) => {
     typewriter.typeString('Welcome to')
       .pauseFor(100)
-      .typeString('<strong><span style="text-shadow:5px 5px 5px white"> Best One </span></strong>')
+      .typeString('<strong><span style="text-shadow:5px 5px 5px grey"> Best One </span></strong>')
   .typeString('<strong> <span style="color: #ffffff; text-shadow:5px 5px 5px grey"><br> Cosmetics and Jewellery Corner</span></strong>')
   .pauseFor(2500)
   .deleteChars(30)

@@ -18,7 +18,7 @@ const Navbar = () => {
             <h3 className={colorChange?"md:text-3xl text-2xl text-white font-extrabold font-['pacifico']":"md:text-3xl text-2xl text-black font-extrabold font-['pacifico']"}>Best <span className='text-violet-600'>One</span></h3>
             <ul className='flex md:flex-row flex-col md:gap-5 gap-3 items-end text-white'>
                 <li className='custom w-32 text-center'> <Link to='/home'>Home</Link> </li>
-                <li className='custom w-32 text-center'><Link to='product'>Product</Link> </li>
+                <li className='custom w-32 text-center'><Link to='allproducts'>Products</Link> </li>
                 <li className='custom w-32 text-center'><Link to='cart'>Cart</Link></li>
                 <li className='custom w-32 text-center'><Link to='dashboard'>Dashboard</Link></li>
                 <li className='custom w-32 text-center'><Link to='customer'>Customer</Link></li>
