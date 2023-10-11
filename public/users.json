@@ -1,0 +1,31 @@
+[
+    {
+        "role": "customer",
+        "phone": "+8801725257270",
+        "password": "pN32255",
+        "address": "Dhaka"
+
+    },
+    {
+        "role": "customer",
+        "phone": "+8801725257270",
+        "password": "pN32255",
+        "address": "Dhaka"
+
+    },
+    {
+        "role": "customer",
+        "phone": "+8801725257270",
+        "password": "pN32255",
+        "address": "Dhaka"
+
+    },
+    {
+        "role": "admin",
+        "phone": "+8801711001100",
+        "password": "admin00",
+        "address": "Kushtia"
+
+    }
+
+]
