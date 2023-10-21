@@ -76,13 +76,14 @@ button:focus-visible {
   @apply text-2xl font-semibold
 }
 .custom{
-  color: white;
-  background: dodgerblue;
+    color: white;
+    background: dodgerblue;
     background: linear-gradient(to left, tomato 50%, yellow 50%) right;
     background-size: 200%;
     transition: .5s ease-out;
     padding: 0.5rem;
-    border-radius: 16px;
+    margin-right: 1px;
+    margin-bottom: 1px;
     
 }
 .custom:hover {
