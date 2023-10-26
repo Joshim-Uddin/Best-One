@@ -11,34 +11,35 @@ import AllProducts from '../Pages/AllProducts';
 const router = createBrowserRouter([
     {
         path: '/',
-        element : <Login />
-    },
-    {
-        path: '/home',
-        element: <Main />,
+        element : <Main />,
         children: [
             {
-                path: '/home',
+                path: '/',
                 element: <Home />
             },
             {
-                path: 'allproducts',
+                path: '/allproducts',
                 element: <AllProducts />
             },
             {
-                path: 'dashboard',
+                path: '/dashboard',
                 element: <Dashboard />
             },
             {
-                path: 'customer',
+                path: '/customer',
                 element: <Customer />
             },
             {
-                path: 'cart',
+                path: '/cart',
                 element: <Cart />
+            },
+            {
+                path: '/login',
+                element: <Login />
             }
         ]
     },
+        
     
 ])
 const Routes = () => {

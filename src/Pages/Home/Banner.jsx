@@ -16,8 +16,8 @@ const Banner = () => {
         
       
     return (
-        <div  className='md:h-screen my-auto mx-auto text-violet-600 py-5 grid md:grid-cols-3 grid-cols-1 gap-5 items-center justify-between md:py-10'>
-             <h2 className='text-center col-span-2 md:text-5xl text-2xl font-bold w-11/12 mx-auto leading-10'>
+        <div  className='md:h-screen my-auto mx-auto text-violet-600 py-5 grid md:grid-cols-5 grid-cols-1 gap-5 items-center justify-between md:py-10'>
+             <h2 className='text-center md:text-5xl col-span-3 text-2xl font-bold w-11/12 mx-auto leading-10'>
       <Typewriter onInit={(typewriter) => {
     typewriter.typeString('Welcome to')
       .pauseFor(100)
@@ -32,7 +32,7 @@ const Banner = () => {
   options={{
     loop: true,
   }}></Typewriter> </h2>
-<div>
+<div className='col-span-2'>
 <Swiper
         effect={'coverflow'}
         grabCursor={true}

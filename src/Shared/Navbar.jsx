@@ -33,11 +33,12 @@ const Navbar = () => {
     
     const navOptions = (
       <ul className='md:flex md:flex-row items-end text-white w-full'>
-          <li className='custom md:w-32 w-full text-center'> <Link to='/home'>Home</Link> </li>
-          <li className='custom md:w-32 w-full text-center'><Link to='allproducts'>Products</Link> </li>
-          <li className='custom md:w-32 w-full text-center'><Link to='cart'>Cart <span className="badge badge-primary">{items}</span></Link></li>
-          <li className='custom md:w-32 w-full text-center'><Link to='dashboard'>Dashboard</Link></li>
-          <li className='custom md:w-32 w-full text-center'><Link to='customer'>Customer</Link></li>
+          <li className='custom md:w-32 w-full text-center'> <Link to='/'>Home</Link> </li>
+          <li className='custom md:w-32 w-full text-center'><Link to='/allproducts'>Products</Link> </li>
+          <li className='custom md:w-32 w-full text-center'><Link to='/cart'>Cart <span className="badge badge-primary">{items}</span></Link></li>
+          <li className='custom md:w-32 w-full text-center'><Link to='/login'>Login</Link></li>
+          <li className='custom md:w-32 w-full text-center'><Link to='/dashboard'>Dashboard</Link></li>
+          <li className='custom md:w-32 w-full text-center'><Link to='/customer'>Customer</Link></li>
       </ul>
       );
 
@@ -52,7 +53,7 @@ const Navbar = () => {
       <div className='max-[600px]:hidden relative'>
       <div className={colorChange?'flex bg-red-950 bg-opacity-80 z-50 justify-between h-20 px-10 items-center uppercase fixed top-0 left-0 right-0':'flex flex-row justify-between items-center h-20 py-8 px-10 w-full uppercase'}>
         <div className="flex items-center">
-          <Link to="/home" className="flex items-center">
+          <Link to="/" className="flex items-center">
           <h3 className={colorChange?"md:text-3xl text-2xl text-white font-extrabold font-['pacifico']":"md:text-3xl text-2xl text-black font-extrabold font-['pacifico']"}>Best <span className='text-violet-600'>One</span></h3>
           </Link>
         </div>
@@ -63,7 +64,7 @@ const Navbar = () => {
       <div className="bg-red-950 bg-opacity-90 text-white fixed top-0 left-0 right-0 z-50">
         <div className="flex justify-between items-center p-4">
           <FaBars onClick={() => setClicked(!clicked)} />
-          <Link to="/home">
+          <Link to="/">
             <h4 className="text-xl font-semibold font-['logo']">
               Best <span className='text-violet-600'>One</span>
             </h4>

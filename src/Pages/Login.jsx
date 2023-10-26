@@ -1,69 +1,70 @@
 import React, { useContext, useEffect, useState } from 'react';
-import PhoneInput from 'react-phone-number-input';
-import 'react-phone-number-input/style.css'
+//import 'react-phone-number-input/style.css'
 import Lottie from "lottie-react";
 // import groovyWalkAnimation from "./groovyWalk.json";
 import animation from "/public/animation_ll8r84nh.json"
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
-    const [value, setValue] = useState()
     const navigate = useNavigate()
     const location = useLocation()
     const from = location.state?.pathname || '/'
     const handleLogin = e =>{
         e.preventDefault();
         const form = e.target;
-        const phoneNumber = value
+        const email = form.email.value
         const password = form.password.value;
-        console.log(phoneNumber, password)
-        if(phoneNumber && password) {
-            navigate('/home', {replace: true})
-        }
-                
-        setValue('')
+        console.log(email, password)
+        navigate('/', {replace: true})
         form.reset()
     }
     return (
+      <>
         <div className='grid md:grid-cols-2 grid-cols-1 items-center md:gap-2 md:w-10/12 mx-auto'>
-        <Lottie animationData={animation} className='md:h-2/3' ></Lottie>
+        <Lottie animationData={animation} className='md:h-1/2' ></Lottie>
         <div className="hero">
-  <div className="hero-content flex-col">
+  <div className="hero-content flex-col w-3/4">
     <div className="text-center">
-      <h1 className="text-5xl font-bold">Login now!</h1>
+      <h1 className="text-3xl font-bold">Sign In</h1>
     </div>
-    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+    <div className="card w-full shadow-2xl bg-base-100">
       <form onSubmit={handleLogin} className="card-body p-4">
         <div className="form-control ">
           <label className="label">
-            <span className="label-text text-violet-600">Phone Number</span>
+            <span className="label-text text-violet-600">Email</span>
           </label>
-          <PhoneInput
-          className="input input-bordered"
-          defaultCountry='BD'
-          international
-      placeholder="Enter phone number"
-      value={value}
-      onChange={setValue}/>
+          <input className="input input-bordered" type="email" name="email" id="email" placeholder='Input Email' />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text text-violet-600">Password</span>
           </label>
           <input type="password" name='password' placeholder="password" className="input input-bordered" />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover text-violet-600">Forgot password?</a>
-          </label>
+        </div>
+        <div>
+          <input type="checkbox" name="remember" id="remember" />
+          <span className='ms-2'>Remember Me</span>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary text-white">Login</button>
+          <button className="btn btn-primary text-white">Sign In</button>
         </div>
+          <div className='flex justify-between'>
+            <label className="label">
+            <a href="#" className="label-text-alt link link-hover text-violet-600">Forgot password?</a>
+          </label>
+          <label className="label">
+            <span className="label-text-alt text-violet-600">Don't have an account? 
+            <Link className='link link-hover ms-2' to='/signup'>Sign Up</Link></span>
+          </label>
+          </div>
       </form>
     </div>
   </div>
 </div>
 
         </div>
+        </>
     );
 };
 

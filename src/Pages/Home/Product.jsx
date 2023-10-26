@@ -21,11 +21,11 @@ const Product = ({product}) => {
   </figure>
   <div className="card-body items-center text-center">
     <h2 className="card-title text-lg px-0">{name}</h2>
-    <div className='w-full mx-auto flex justify-between items-center gap-10 mb-5'>
+    <div className='w-full mx-auto flex justify-between items-center gap-10 mb-8'>
       <p>{brand}</p>
     <p>$ {price}</p>
     </div>
-    <div className="card-actions absolute bottom-2 mt-4">
+    <div className="card-actions absolute bottom-2 mt-6">
       <button className="btn bg-[#7C3AED] text-white" onClick={() => props.setOpenModal('pop-up')}>Details</button>
     </div>
   </div>
