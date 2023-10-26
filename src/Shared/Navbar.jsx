@@ -33,12 +33,12 @@ const Navbar = () => {
     
     const navOptions = (
       <ul className='md:flex md:flex-row items-end text-white w-full'>
-          <li className='custom md:w-32 w-full text-center'> <Link to='/'>Home</Link> </li>
-          <li className='custom md:w-32 w-full text-center'><Link to='/allproducts'>Products</Link> </li>
-          <li className='custom md:w-32 w-full text-center'><Link to='/cart'>Cart <span className="badge badge-primary">{items}</span></Link></li>
-          <li className='custom md:w-32 w-full text-center'><Link to='/login'>Login</Link></li>
-          <li className='custom md:w-32 w-full text-center'><Link to='/dashboard'>Dashboard</Link></li>
-          <li className='custom md:w-32 w-full text-center'><Link to='/customer'>Customer</Link></li>
+          <Link to='/'><li className='custom md:w-32 w-full text-center'> Home </li></Link>
+          <Link to='/allproducts'><li className='custom md:w-32 w-full text-center'>Products </li></Link>
+          <Link to='/cart'><li className='custom md:w-32 w-full text-center'>Cart <span className="badge badge-primary">{items}</span></li></Link>
+          <Link to='/login'><li className='custom md:w-32 w-full text-center'>Login</li></Link>
+          <Link to='/dashboard'><li className='custom md:w-32 w-full text-center'>Dashboard</li></Link>
+          <Link to='/customer'><li className='custom md:w-32 w-full text-center'>Customer</li></Link>
       </ul>
       );
 
