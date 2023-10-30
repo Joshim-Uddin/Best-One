@@ -12,9 +12,12 @@ const SignUp = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
+        console.log(email, password)
         signUp(email, password)
-        .then(res=>console.log(res.user))
-        .catch(err => console.log(err))
+        .then(res=>{
+          const currentUser = res.user;
+          console.log(currentUser.email)
+        }).catch(err => console.log(err))
         form.reset()
     }
     return (
