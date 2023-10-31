@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProviders';
 import animation from "/public/animation_ll8r84nh.json"
 import Lottie from 'lottie-react';
+import Swal from 'sweetalert2';
 
 const SignUp = () => {
     const {signUp} = useContext(AuthContext)
@@ -16,7 +17,12 @@ const SignUp = () => {
         signUp(email, password)
         .then(res=>{
           const currentUser = res.user;
-          console.log(currentUser.email)
+          Swal.fire({
+            icon: 'success',
+            title: 'Signed Up Successfully!',
+            showConfirmButton: false,
+            timer: 1500
+          })
         }).catch(err => console.log(err))
         form.reset()
     }

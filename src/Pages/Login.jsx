@@ -11,18 +11,17 @@ const Login = () => {
   const {login} = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
-    const from = location.state?.pathname || '/'
+    const from = location?.state?.pathname || '/'
     const handleLogin = e =>{
         e.preventDefault();
         const form = e.target;
         const email = form.email.value
         const password = form.password.value;
-        console.log(email, password)
       login(email, password).then((result)=>{
         const user = result.user
-        console.log(user)
+        navigate(from, {replace: true})
       }).catch((error)=>console.log(error))
-        navigate('/', {replace: true})
+        
         form.reset()
     }
     return (

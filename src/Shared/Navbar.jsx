@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { getCart } from '../fakedb';
 import { FaBars, FaShoppingCart } from "react-icons/fa";
+import { useContext } from 'react';
+import { AuthContext } from '../Providers/AuthProviders';
 
 const Navbar = () => {
     const [clicked, setClicked] = useState(false);
     const [users, setUsers] = useState([])
+    const {user, loggingOut} = useContext(AuthContext)
     useEffect(() =>{
         fetch('/users.json').then(res=>res.json()).then(data=>setUsers(data));
     })
@@ -30,13 +33,17 @@ const Navbar = () => {
     for(let x in cart){
              items += cart[x]        
     } 
+    const logOut = ()=>{
+      loggingOut().then(res=>res).catch(err=>console.log(err))
+    }
+
     
     const navOptions = (
       <ul className='md:flex md:flex-row items-end text-white w-full'>
           <Link to='/'><li className='custom md:w-32 w-full text-center'> Home </li></Link>
           <Link to='/allproducts'><li className='custom md:w-32 w-full text-center'>Products </li></Link>
           <Link to='/cart'><li className='custom md:w-32 w-full text-center'>Cart <span className="badge badge-primary">{items}</span></li></Link>
-          <Link to='/login'><li className='custom md:w-32 w-full text-center'>Login</li></Link>
+          {user?<li onClick={logOut} className='custom md:w-32 w-full text-center cursor-pointer'>Logout</li>:<Link to='/login'><li className='custom md:w-32 w-full text-center'>Login</li></Link>}
           <Link to='/dashboard'><li className='custom md:w-32 w-full text-center'>Dashboard</li></Link>
           <Link to='/customer'><li className='custom md:w-32 w-full text-center'>Customer</li></Link>
       </ul>
