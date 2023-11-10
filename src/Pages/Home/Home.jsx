@@ -6,11 +6,11 @@ import Products from './Products';
 
 const Home = () => {
     return (
-  <div>
+  <>
    <Banner />
    <Products />
   
-</div>
+</>
     );
 };
 
