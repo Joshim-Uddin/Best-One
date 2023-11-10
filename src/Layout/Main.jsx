@@ -6,7 +6,7 @@ import ProgressBar from "react-scroll-progress-bar";
 
 const Main = () => {
     return (
-        <div className='bg-gradient-to-r from-[#fffff] to-[#484e4c]'>
+        <div className='bg-[#F8F6F3]'>
         <ProgressBar height="4px" bgcolor="#F43059"
       duration="1"></ProgressBar>
         <Navbar />

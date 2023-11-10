@@ -14,12 +14,14 @@ import bag from "./../../assets/bag_six.png";
 import watch from "./../../assets/watch_one.png";
 import cosmet from "./../../assets/cosmetics_5.png";
 import jwel from "./../../assets/jewellery_8.png";
+import { Link } from "react-router-dom";
 
 
 const Banner = () => {
   return (
     <>
-      <div className="relative mb-10">
+      <div className="relative py-16 md:grid grid-cols-2 items-center md:gap-16">
+     
         <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -56,7 +58,11 @@ const Banner = () => {
           </div>
           </SwiperSlide>
       </Swiper>
-      <h2 className='h-20 text-center md:text-4xl text-2xl font-bold mx-auto leading-10'>
+      <div>
+        <h3 className="md:text-2xl text-lg md:font-semibold mb-5">
+          Pureity is our main concern
+        </h3>
+      <h2 className='h-20 text-left md:text-4xl text-2xl font-bold mx-auto leading-10'>
       <Typewriter onInit={(typewriter) => {
     typewriter.typeString('Welcome to')
       .pauseFor(100)
@@ -71,8 +77,11 @@ const Banner = () => {
   options={{
     loop: true,
   }}></Typewriter> </h2>
+  <div className="flex justify-start items-center py-5 mt-8">
+  <Link to='/allproducts'><button className="btn btn-primary">Buy Now</button></Link>
+  </div>
       </div>
-      <hr />
+      </div>
     </>
   );
 };

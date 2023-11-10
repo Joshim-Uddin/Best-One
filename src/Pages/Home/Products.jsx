@@ -8,6 +8,7 @@ const Products = () => {
     return (
         <>
         <h2 className='text-center md:text-4xl text-2xl font-bold text-[#7C3AED]'>Our Products</h2>
+        <hr className='w-72 mx-auto my-5 h-1 bg-[#FF6743]'/>
         <div className='grid md:grid-cols-4 grid-cols-1 gap-4 w-11/12 mx-auto my-10 py-10'>
             {products.slice(0,12).map(product =><Product key={product.id} product={product}></Product>)}
             
