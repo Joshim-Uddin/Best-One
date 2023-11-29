@@ -59,10 +59,10 @@ const Banner = () => {
           </SwiperSlide>
       </Swiper>
       <div>
-        <h3 className="md:text-2xl text-lg md:font-semibold mb-5">
+        <h3 className="md:text-left text-center md:text-2xl text-lg md:font-semibold mb-5">
           Pureity is our main concern
         </h3>
-      <h2 className='h-20 text-left md:text-4xl text-2xl font-bold mx-auto leading-10'>
+      <h2 className='h-20 md:text-left text-center md:text-4xl text-2xl font-bold mx-auto leading-10'>
       <Typewriter onInit={(typewriter) => {
     typewriter.typeString('Welcome to')
       .pauseFor(100)
@@ -77,7 +77,7 @@ const Banner = () => {
   options={{
     loop: true,
   }}></Typewriter> </h2>
-  <div className="flex justify-start items-center py-5 mt-8">
+  <div className="flex md:justify-start justify-center items-center py-5 mt-8">
   <Link to='/allproducts'><button className="btn btn-primary">Buy Now</button></Link>
   </div>
       </div>

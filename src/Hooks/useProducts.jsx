@@ -10,8 +10,8 @@ const useProducts = () => {
             for(let j=0; j<data.length-1; j++){
                 randomProducts.push(data[(Math.floor(Math.random() * data.length))])
             }
-            
-            setProducts(randomProducts)
+            let uniq = a => [...new Set(a)]; //function to generate unique productslist
+            setProducts(uniq(randomProducts))
         });
     }, [])
     return products;

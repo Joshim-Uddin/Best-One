@@ -15,7 +15,7 @@ const Product = ({product}) => {
     }
     
     return (
-        <><div className="card w-full bg-base-100 shadow-xl">
+        <><div className="card w-full bg-base-100 shadow-xl p-2">
   <figure className="px-0">
     <img src={image_url} alt={`${name}'s image`} className="rounded-xl md:h-52 h-44" />
   </figure>
