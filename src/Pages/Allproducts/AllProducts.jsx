@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import useProducts from '../Hooks/useProducts';
-import Product from './Home/Product';
+import useProducts from '../../Hooks/useProducts';
+import Product from '../Home/Product';
 
 
 const AllProducts = () => {

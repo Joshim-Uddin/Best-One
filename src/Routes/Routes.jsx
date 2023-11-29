@@ -3,11 +3,11 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Main from '../Layout/Main';
 import Dashboard from '../Pages/Dashboard';
 import Customer from '../Pages/Customer';
-import Login from '../Pages/Login';
+import Login from '../Shared/Login';
 import Cart from '../Pages/Cart';
 import Home from '../Pages/Home/Home';
-import AllProducts from '../Pages/AllProducts';
-import SignUp from '../Pages/SignUp';
+import AllProducts from '../Pages/Allproducts/AllProducts';
+import SignUp from '../Shared/SignUp';
 import PrivateRoutes from './PrivateRoutes';
 
 const router = createBrowserRouter([

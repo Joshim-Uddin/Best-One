@@ -80,7 +80,7 @@ const Navbar = () => {
         <div
           className={
             clicked
-              ? `flex flex-col items-center gap-2 relative top-0 left-0 pb-3`
+              ? `flex flex-col items-center gap-2 relative top-0 left-0`
               : `flex flex-col gap-2 ps-4 absolute -top-72`
           }
         >
