@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { getCart } from '../fakedb';
-import { FaBars, FaShoppingCart } from "react-icons/fa";
+import { FaBars, FaCartPlus, FaShoppingCart } from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../Providers/AuthProviders';
 
@@ -40,12 +40,12 @@ const Navbar = () => {
     
     const navOptions = (
       <ul className='md:flex md:flex-row items-end text-white w-full'>
-          <Link to='/'><li className='custom md:w-32 w-full text-center'> Home </li></Link>
-          <Link to='/allproducts'><li className='custom md:w-32 w-full text-center'>Products </li></Link>
-          <Link to='/cart'><li className='custom md:w-32 w-full text-center'>Cart <span className="badge badge-primary">{items}</span></li></Link>
-          {user?<li onClick={logOut} className='custom md:w-32 w-full text-center cursor-pointer'>Logout</li>:<Link to='/login'><li className='custom md:w-32 w-full text-center'>Login</li></Link>}
-          <Link to='/dashboard'><li className='custom md:w-32 w-full text-center'>Dashboard</li></Link>
-          <Link to='/customer'><li className='custom md:w-32 w-full text-center'>Customer</li></Link>
+          <Link to='/'><li className='custom md:w-32 h-12 w-full text-center'> Home </li></Link>
+          <Link to='/allproducts'><li className='custom md:w-32 h-12 w-full text-center'>Products </li></Link>
+          {user?<li onClick={logOut} className='custom md:w-3 h-12 w-full text-center cursor-pointer'>Logout</li>:<Link to='/login'><li className='custom md:w-32 h-12 w-full text-center'>Login</li></Link>}
+          <Link to='/dashboard'><li className='custom md:w-32 h-12 w-full text-center'>Dashboard</li></Link>
+          <Link to='/customer'><li className='custom md:w-32 h-12 w-full text-center'>Customer</li></Link>
+          <Link to='/cart'><li className='custom md:w-32 h-12 w-full text-center relative'><FaShoppingCart className='text-3xl mx-auto' /> <span className="absolute top-0 right-3 badge badge-warning">{items}</span></li></Link>
       </ul>
       );
 
@@ -58,7 +58,7 @@ const Navbar = () => {
     return (
         <nav>
       <div className='max-[600px]:hidden relative'>
-      <div className={colorChange?'flex bg-slate-500 bg-opacity-80 z-50 justify-between h-20 px-10 items-center uppercase fixed top-0 left-0 right-0':'flex flex-row justify-between items-center h-20 py-8 px-10 w-full uppercase'}>
+      <div className={colorChange?'flex bg-black bg-opacity-60 z-50 justify-between h-20 px-10 items-center uppercase fixed top-0 left-0 right-0':'flex flex-row justify-between items-center h-20 py-8 px-10 w-full uppercase'}>
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
           <h3 className={colorChange?"md:text-3xl text-2xl text-white font-extrabold font-['pacifico']":"md:text-3xl text-2xl text-black font-extrabold font-['pacifico']"}>Best <span className='text-violet-600'>One</span></h3>

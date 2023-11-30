@@ -78,7 +78,7 @@ button:focus-visible {
 .custom{
     color: white;
     background: dodgerblue;
-    background: linear-gradient(to left, tomato 50%, yellow 50%) right;
+    background: linear-gradient(to left, tomato 50%, indigo 50%) right;
     background-size: 200%;
     transition: .5s ease-out;
     padding: 0.5rem;
@@ -88,7 +88,6 @@ button:focus-visible {
 }
 .custom:hover {
   background-position: left;
-  color:red;
 }
 .navbar {
   background-color: transparent;
