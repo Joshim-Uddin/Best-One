@@ -5,6 +5,7 @@ import Lottie from "lottie-react";
 import animation from "/public/animation_ll8r84nh.json"
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProviders';
+import Swal from 'sweetalert2';
 
 
 const Login = () => {
@@ -19,6 +20,13 @@ const Login = () => {
         const password = form.password.value;
       login(email, password).then((result)=>{
         const user = result.user
+        Swal.fire({
+          title: "Login Successfully!",
+          icon: "success",
+          timer: 1500,
+          showConfirmButton: false,
+          showCloseButton: false
+        });
         navigate(from, {replace: true})
       }).catch((error)=>console.log(error))
         

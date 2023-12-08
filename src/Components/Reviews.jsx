@@ -13,7 +13,7 @@ const Reviews = () => {
             <div className='flex flex-col gap-3 justify-center items-center bg-slate-100 p-5 rounded-md shadow-md'>
             <Rating style={{ maxWidth: 180 }} value={4} readOnly />
             <p className='text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nostrum autem dicta, consequatur adipisci ullam!</p>
-           <div className='flex justify-center gap-5 items-center'>
+           <div className='flex flex-col justify-center gap-5 items-center'>
            <img src={image_one} alt="" className='h-20 rounded-full'/>
             <h3 className='text-xl font-semibold'>Name</h3>
            </div>
@@ -22,7 +22,7 @@ const Reviews = () => {
             <div className='flex flex-col gap-3 justify-center items-center bg-slate-100 p-5 rounded-md shadow-md'>
             <Rating style={{ maxWidth: 180 }} value={4} readOnly />
             <p className='text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nostrum autem dicta, consequatur adipisci ullam!</p>
-           <div className='flex justify-center gap-5 items-center'>
+           <div className='flex flex-col justify-center gap-5 items-center'>
            <img src={image_one} alt="" className='h-20 rounded-full'/>
             <h3 className='text-xl font-semibold'>Name</h3>
            </div>
@@ -31,7 +31,7 @@ const Reviews = () => {
             <div className='flex flex-col gap-3 justify-center items-center bg-slate-100 p-5 rounded-md shadow-md'>
             <Rating style={{ maxWidth: 180 }} value={4} readOnly />
             <p className='text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nostrum autem dicta, consequatur adipisci ullam!</p>
-           <div className='flex justify-center gap-5 items-center'>
+           <div className='flex flex-col justify-center gap-5 items-center'>
            <img src={image_one} alt="" className='h-20 rounded-full'/>
             <h3 className='text-xl font-semibold'>Name</h3>
            </div>

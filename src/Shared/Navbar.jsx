@@ -42,7 +42,7 @@ const Navbar = () => {
       <ul className='md:flex md:flex-row items-end text-white w-full'>
           <Link to='/'><li className='custom md:w-32 h-12 w-full text-center'> Home </li></Link>
           <Link to='/allproducts'><li className='custom md:w-32 h-12 w-full text-center'>Products </li></Link>
-          {user?<li onClick={logOut} className='custom md:w-3 h-12 w-full text-center cursor-pointer'>Logout</li>:<Link to='/login'><li className='custom md:w-32 h-12 w-full text-center'>Login</li></Link>}
+          {user?<li onClick={logOut} className='custom md:w-32 h-12 w-full text-center cursor-pointer'>Logout</li>:<Link to='/login'><li className='custom md:w-32 h-12 w-full text-center'>Login</li></Link>}
           <Link to='/dashboard'><li className='custom md:w-32 h-12 w-full text-center'>Dashboard</li></Link>
           <Link to='/customer'><li className='custom md:w-32 h-12 w-full text-center'>Customer</li></Link>
           <Link to='/cart'><li className='custom md:w-32 h-12 w-full text-center relative'><FaShoppingCart className='text-3xl mx-auto' /> <span className="absolute top-0 right-3 badge badge-warning">{items}</span></li></Link>
