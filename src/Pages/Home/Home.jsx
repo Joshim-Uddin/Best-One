@@ -6,6 +6,7 @@ import Priveliges from '../../Components/Priveliges';
 import Sponsors from '../../Components/Sponsors';
 import Youtube from '../../Components/Youtube';
 import Featured from '../../Components/Featured';
+import Comments from '../../Components/Comments';
 
 
 
@@ -19,6 +20,7 @@ const Home = () => {
    <Reviews />
    <Featured />
    <Sponsors />
+   <Comments />
   
 </>
     );
