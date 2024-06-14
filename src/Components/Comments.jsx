@@ -3,7 +3,7 @@ import React from 'react';
 const Comments = () => {
     return (
         <>
-        <h2 className='text-center text-3xl font-semibold py-5 mb-5 uppercase'>
+        <h2 className='text-center text-3xl font-semibold py-5 mb-5 uppercasenp'>
             Leave a Comment
         </h2>
         <form action="" className='md:w-1/3 mx-auto flex flex-col justify-center gap-3 '>

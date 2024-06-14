@@ -61,7 +61,7 @@ const Navbar = () => {
       <div className={colorChange?'flex bg-black bg-opacity-60 z-50 justify-between h-20 px-10 items-center uppercase fixed top-0 left-0 right-0':'flex flex-row justify-between items-center h-20 py-8 px-10 w-full uppercase'}>
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
-          <h3 className={colorChange?"md:text-3xl text-2xl text-white font-extrabold font-['pacifico']":"md:text-3xl text-2xl text-black font-extrabold font-['pacifico']"}>Best <span className='text-violet-600'>One</span></h3>
+          <h3 className={colorChange?"md:text-3xl text-2xl text-white font-extrabold font-['pacifico']":"md:text-3xl text-2xl text-black font-extrabold font-['pacifico']"}>Best <span className='text-[#ff6347]'>One</span></h3>
           </Link>
         </div>
         <div className="flex items-center gap-4 text-lg">{navOptions}</div>

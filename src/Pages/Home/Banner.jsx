@@ -69,8 +69,11 @@ const Banner = () => {
       .typeString('<strong><span style="color:#7C3AED; text-shadow:5px 5px 5px white"> Best One </span></strong>')
   .typeString('<strong> <span style="color:#7C3AED; text-shadow:5px 5px 5px white"><br> Cosmetics and Jewellery Corner</span></strong>')
   .pauseFor(2500)
-  .deleteChars(30)
-  .typeString('<strong><span style="color:#7C3AED; text-shadow:5px 5px 5px white"> Unique Collections Here!</span></strong>')
+  .deleteChars(54)
+  .typeString('We Provide')
+  .pauseFor(100)
+  .typeString('<strong><span style="color:#7C3AED; text-shadow:5px 5px 5px white"></h2> Your Favorite</span></strong>')
+  .typeString('<strong><span style="color:#7C3AED; text-shadow:5px 5px 5px white lineHeight:20px"><br> Cosmetics Collections Here!</span></strong>')
   .pauseFor(2500)
       .start();
   }}
