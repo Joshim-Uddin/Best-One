@@ -66,7 +66,7 @@ const Banner = () => {
       <Typewriter onInit={(typewriter) => {
     typewriter.typeString('Welcome to')
       .pauseFor(100)
-      .typeString('<strong><span style="color:#7C3AED; text-shadow:5px 5px 5px white"> Best One </span></strong>')
+      .typeString('<strong><span style="color:#7C3AED; text-shadow:5px 5px 5px white margin-bottom:10px"> Best One </span></strong>')
   .typeString('<strong> <span style="color:#7C3AED; text-shadow:5px 5px 5px white"><br> Cosmetics and Jewellery Corner</span></strong>')
   .pauseFor(2500)
   .deleteChars(54)
