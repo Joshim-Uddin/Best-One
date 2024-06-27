@@ -58,7 +58,7 @@ const Navbar = () => {
     return (
         <nav>
       <div className='max-[600px]:hidden relative'>
-      <div className={colorChange?'flex bg-black bg-opacity-60 z-50 justify-between h-20 px-10 items-center uppercase fixed top-0 left-0 right-0':'flex flex-row justify-between items-center h-20 py-8 px-10 w-full uppercase'}>
+      <div className={colorChange?'flex bg-black bg-opacity-60 z-50 justify-between h-20 px-10 items-center uppercase fixed top-0 left-0 right-0':'flex flex-row justify-between items-center h-20 py-8 px-10 w-full uppercase bg-orange-400'}>
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
           <h3 className={colorChange?"md:text-3xl text-2xl text-white font-extrabold font-['pacifico']":"md:text-3xl text-2xl text-black font-extrabold font-['pacifico']"}>Best <span className='text-[#ff6347]'>One</span></h3>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Modal } from 'flowbite-react';
 import { addToDb } from '../../fakedb';
 import LazyLoad from 'react-lazyload';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Product = ({product}) => {
     const [cart, setCart] = useState([])
@@ -18,9 +19,10 @@ const Product = ({product}) => {
     return (
         <><div className="card w-full bg-base-100 shadow-xl p-2">
   <figure className="px-0">
-    <LazyLoad height={200}>
-    <img src={image_url} alt={`${name}'s image`} className="rounded-xl md:h-52 h-44" />
-    </LazyLoad>
+    
+    <LazyLoadImage src={image_url} alt={`${name}'s image`} className="rounded-xl md:h-52 h-44"/>
+    {/* <img src={image_url} alt={`${name}'s image`} className="rounded-xl md:h-52 h-44" /> */}
+    
   </figure>
   <div className="card-body items-center text-center">
     <h2 className="card-title text-lg px-0">{name}</h2>
