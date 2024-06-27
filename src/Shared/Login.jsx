@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-//import 'react-phone-number-input/style.css'
 import Lottie from "lottie-react";
 // import groovyWalkAnimation from "./groovyWalk.json";
 import animation from "/public/animation_ll8r84nh.json"

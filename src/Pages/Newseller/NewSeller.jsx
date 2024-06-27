@@ -1,5 +1,6 @@
 import React from 'react';
 import Registration from './Registration';
+import { Outlet } from 'react-router-dom';
 
 const NewSeller = () => {
     return (
@@ -8,7 +9,7 @@ const NewSeller = () => {
                 <h2 className='text-[#fe5418] text-4xl font-bold'>Best One <span><br />Seller Center</span></h2>
             </nav>
             <div>
-                <Registration />
+                <Outlet />
             </div>
         </>
     );

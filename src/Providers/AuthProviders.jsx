@@ -1,17 +1,18 @@
 import React, { createContext, useState } from 'react';
-import {createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut} from 'firebase/auth'
+import {RecaptchaVerifier, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPhoneNumber, signOut} from 'firebase/auth'
 import { app } from '../Firebase/firebase.config';
 import { useEffect } from 'react';
 
 
 const auth = getAuth(app)
-auth.languageCode = 'it';
+
 export const AuthContext = createContext(null)
 
 
 const AuthProviders = ({children}) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
+
 
 const login =(email, password)=>{
     setLoading(true)
@@ -25,6 +26,10 @@ const loggingOut = ()=>{
     setLoading(true);
     return signOut(auth)
 }
+const sellerSignUp = (phoneNumber)=>{
+    const recaptcha = new RecaptchaVerifier(auth, "recaptcha", {})
+    return signInWithPhoneNumber(auth, phoneNumber, recaptcha)
+}
 useEffect(()=>{
     const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
         setUser(currentUser)
@@ -34,7 +39,7 @@ useEffect(()=>{
 }, [])
 
 const authInfo = {
-    user,loading, login, signUp, loggingOut
+    user,loading, login, signUp, loggingOut, sellerSignUp
 }
     return (
         <AuthContext.Provider value={authInfo}>

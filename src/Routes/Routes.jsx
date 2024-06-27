@@ -11,6 +11,8 @@ import SignUp from '../Shared/SignUp';
 import PrivateRoutes from './PrivateRoutes';
 import AddProduct from '../Components/AddProduct';
 import NewSeller from '../Pages/Newseller/NewSeller';
+import Registration from '../Pages/Newseller/Registration';
+import SellerLogin from '../Pages/Newseller/SellerLogin';
 
 const router = createBrowserRouter([
     {
@@ -45,8 +47,18 @@ const router = createBrowserRouter([
     },
     {
         path:"/newseller",
-        element: <NewSeller />
-        
+        element: <NewSeller />,
+        children:[
+            {
+                path: '',
+                element: <Registration />
+            },
+            {
+                path: 'sellerlogin',
+                element: <SellerLogin />
+            }
+        ]
+
     },
     {
         path: '/dashboard',
