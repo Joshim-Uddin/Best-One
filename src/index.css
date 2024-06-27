@@ -76,18 +76,20 @@ button:focus-visible {
   @apply text-2xl font-semibold
 }
 .custom{
-    color: white;
-    background: dodgerblue;
-    background: linear-gradient(to left, tomato 50%, indigo 50%) right;
+    color: black;
     background-size: 200%;
-    transition: .5s ease-out;
     padding: 0.5rem;
     margin-right: 1px;
     margin-bottom: 1px;
+    /* background: linear-gradient(to left, red 25%, red 100%) right;
+    transition: .5s ease-out; */
     
 }
-.custom:hover {
-  background-position: left;
+.custom:hover{
+  scale: 110%;
+  color: #E02424;
+  transition: 0.2s ease-out;
+  
 }
 .navbar {
   background-color: transparent;
@@ -98,4 +100,12 @@ button:focus-visible {
 }
 .swiper{
   width: 100%;
+}
+
+.btn-cta{
+  @apply bg-gradient-to-r from-[#f8b600] to-[#f89603] hover:text-white hover:bg-gradient-to-l hover:from-[#6644ff] hover:to-[#2b0399]
+}
+
+.registration{
+  background: url("../src/assets/bg.webp") no-repeat center;
 }

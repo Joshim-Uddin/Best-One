@@ -10,6 +10,7 @@ import AllProducts from '../Pages/Allproducts/AllProducts';
 import SignUp from '../Shared/SignUp';
 import PrivateRoutes from './PrivateRoutes';
 import AddProduct from '../Components/AddProduct';
+import NewSeller from '../Pages/Newseller/NewSeller';
 
 const router = createBrowserRouter([
     {
@@ -39,15 +40,20 @@ const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp />
-            }
+            },
         ]
+    },
+    {
+        path:"/newseller",
+        element: <NewSeller />
+        
     },
     {
         path: '/dashboard',
         element: <Dashboard />,
         children: [
             {
-                path: 'addproduct',
+                path: '',
                 element: <AddProduct />
             }
 

@@ -39,13 +39,13 @@ const Navbar = () => {
 
     
     const navOptions = (
-      <ul className='md:flex md:flex-row items-end text-white w-full'>
+      <ul className='md:flex md:flex-row items-end text-black w-full'>
           <Link to='/'><li className='custom md:w-32 h-12 w-full text-center'> Home </li></Link>
           <Link to='/allproducts'><li className='custom md:w-32 h-12 w-full text-center'>Products </li></Link>
           {user?<li onClick={logOut} className='custom md:w-32 h-12 w-full text-center cursor-pointer'>Logout</li>:<Link to='/login'><li className='custom md:w-32 h-12 w-full text-center'>Login</li></Link>}
           <Link to='/dashboard'><li className='custom md:w-32 h-12 w-full text-center'>Dashboard</li></Link>
           <Link to='/customer'><li className='custom md:w-32 h-12 w-full text-center'>Customer</li></Link>
-          <Link to='/cart'><li className='custom md:w-32 h-12 w-full text-center relative'><FaShoppingCart className='text-3xl mx-auto' /> <span className="absolute top-0 right-3 badge badge-warning">{items}</span></li></Link>
+          <Link to='/cart'><li className='custom md:w-32 h-12 w-full text-center mx-auto relative'><FaShoppingCart className='text-3xl mx-auto' /> <span className="absolute top-0 md:right-3 right-[37%] badge badge-warning">{items}</span></li></Link>
       </ul>
       );
 
@@ -58,21 +58,25 @@ const Navbar = () => {
     return (
         <nav>
       <div className='max-[600px]:hidden relative'>
-      <div className={colorChange?'flex bg-black bg-opacity-60 z-50 justify-between h-20 px-10 items-center uppercase fixed top-0 left-0 right-0':'flex flex-row justify-between items-center h-20 py-8 px-10 w-full uppercase bg-orange-400'}>
-        <div className="flex items-center">
+      <div className='flex flex-row justify-between items-center h-24 py-8 px-10 w-full uppercase bg-gradient-to-r from-[#FE5418] via-[#f88204] to-[#f89603] fixed top-0 left-0 right-0 z-50'>
+        <div className="py-auto">
+         <div className='flex gap-4 text-white mb-2 ps-4'>
+         <Link to="/newseller"><h5 className='capitalize'>Become a seller</h5></Link>
+         <h5 className='capitalize'>Help & Support</h5>
+         </div>
           <Link to="/" className="flex items-center">
-          <h3 className={colorChange?"md:text-3xl text-2xl text-white font-extrabold font-['pacifico']":"md:text-3xl text-2xl text-black font-extrabold font-['pacifico']"}>Best <span className='text-[#ff6347]'>One</span></h3>
+          <h3 className="md:text-3xl text-2xl text-white font-extrabold font-['pacifico']">Best <span className='text-violet-700 ps-2'>One</span></h3>
           </Link>
         </div>
         <div className="flex items-center gap-4 text-lg">{navOptions}</div>
       </div>
       </div>
-      <div className="min-[600px]:hidden relative mb-16">
-      <div className="bg-red-950 bg-opacity-90 text-white fixed top-0 left-0 right-0 z-50">
+      <div className={clicked?"min-[600px]:hidden relative h-72 mb-16":"min-[600px]:hidden relative"}>
+      <div className="bg-red-950 text-white fixed top-0 left-0 right-0 z-50">
         <div className="flex justify-between items-center p-4">
-          <FaBars onClick={() => setClicked(!clicked)} />
+          <FaBars onClick={() => setClicked(!clicked)}  className='text-2xl'/>
           <Link to="/">
-            <h4 className="text-xl font-semibold font-['logo']">
+            <h4 className="text-2xl font-semibold font-['logo']">
               Best <span className='text-violet-600'>One</span>
             </h4>
           </Link>
@@ -80,7 +84,7 @@ const Navbar = () => {
         <div
           className={
             clicked
-              ? `flex flex-col items-center gap-2 relative top-0 left-0`
+              ? `pb-4`
               : `flex flex-col gap-2 ps-4 absolute -top-72`
           }
         >

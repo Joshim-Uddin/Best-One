@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <>
-      <div className="relative py-16 md:grid grid-cols-2 items-center md:gap-16">
+      <div className="relative pt-24 md:grid grid-cols-2 items-center md:gap-16 h-screen">
      
         <Swiper
         slidesPerView={1}
@@ -59,8 +59,8 @@ const Banner = () => {
           </SwiperSlide>
       </Swiper>
       <div>
-        <h3 className="md:text-left text-center md:text-2xl text-lg md:font-semibold mb-5">
-          Pureity is our main concern
+        <h3 className="uppercase text-red-800 md:text-left text-center md:text-2xl text-lg md:font-semibold mb-5">
+          No Compromise In Quality
         </h3>
       <h2 className='h-20 md:text-left text-center md:text-4xl text-2xl font-bold mx-auto leading-10'>
       <Typewriter onInit={(typewriter) => {
@@ -72,8 +72,8 @@ const Banner = () => {
   .deleteChars(54)
   .typeString('We Provide')
   .pauseFor(100)
-  .typeString('<strong><span style="color:#7C3AED; text-shadow:5px 5px 5px white"></h2> Your Favorite</span></strong>')
-  .typeString('<strong><span style="color:#7C3AED; text-shadow:5px 5px 5px white lineHeight:20px"><br> Cosmetics Collections Here!</span></strong>')
+  .typeString('<strong><span style="color:#7C3AED; text-shadow:5px 5px 5px white; padding-bottom:30px"></h2> Your Favorite</span></strong>')
+  .typeString('<strong><span style="color:#7C3AED; text-shadow:5px 5px 5px white"><br> Cosmetics Collections Here!</span></strong>')
   .pauseFor(2500)
       .start();
   }}
@@ -81,7 +81,7 @@ const Banner = () => {
     loop: true,
   }}></Typewriter> </h2>
   <div className="flex md:justify-start justify-center items-center py-5 mt-8">
-  <Link to='/allproducts'><button className="btn btn-primary">Buy Now</button></Link>
+  <Link to='/allproducts'><button className="btn btn-cta">Buy Now</button></Link>
   </div>
       </div>
       </div>
