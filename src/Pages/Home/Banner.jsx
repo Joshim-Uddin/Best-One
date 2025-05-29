@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <>
-      <div className="relative pt-24 md:grid grid-cols-2 items-center md:gap-16 h-screen">
+      <div className="relative pt-24 md:grid grid-cols-2 items-center md:gap-16 lg:h-screen">
      
         <Swiper
         slidesPerView={1}
@@ -80,7 +80,7 @@ const Banner = () => {
   options={{
     loop: true,
   }}></Typewriter> </h2>
-  <div className="flex md:justify-start justify-center items-center py-5 mt-8">
+  <div className="flex md:justify-start justify-center items-center py-5 md:mt-8">
   <Link to='/allproducts'><button className="btn btn-cta">Buy Now</button></Link>
   </div>
       </div>

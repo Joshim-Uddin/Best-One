@@ -12,37 +12,59 @@ import Swal from 'sweetalert2';
 const Registration = () => {
     const [value, setValue] = useState()
     const [newUser, setNewUser] = useState()
-    const [otp, setOtp] = useState("")
     const [registrationSuccess, setRegistrationSuccess] = useState(false)
-    const {sellerSignUp} = useContext(AuthContext)
-    const handleSubmit = () => {
-        const phoneNumber= ("+"+ value)
-        sellerSignUp(phoneNumber)
-        .then((confirmationResult)=>{if(confirmationResult){setNewUser(confirmationResult)}else{ grecaptcha.reset()}})
-        .catch((err)=>console.log(err));
+    const [password, setPassword] = useState("")
+    const [confirmPassword, setConfirmPassword] = useState("")
+    const [userName, setUserName] = useState("")
+    const {signUp} = useContext(AuthContext)
+    const handleSubmit = (e) => {
+       e.preventDefault()
+               const form = e.target;
+               const email = form.email.value;
+               const password = form.password.value;
+               console.log(email, password)
+               signUp(email, password)
+               .then(res=>{
+                 const currentUser = res.user;
+                 setRegistrationSuccess(true)
+                 Swal.fire({
+                   icon: 'success',
+                   title: 'Signed Up Successfully!',
+                   showConfirmButton: false,
+                   timer: 1500
+                 })
+               }).catch(err => console.log(err))
+               form.reset()
+
+        // const phoneNumber= ("+"+ value)
+        // sellerSignUp(phoneNumber)
+        // .then((confirmationResult)=>{if(confirmationResult){setNewUser(confirmationResult)}else{ grecaptcha.reset()}})
+        // .catch((err)=>console.log(err));
     }
-    const verifyOtp=async()=>{
-        try {
-            const data = await newUser.confirm(otp)
-            if(data.user.phoneNumber !== null || data.user.phoneNumber !== ""){
-                Swal.fire({
-                    title: "Confirm",
-                    titleText: "Seller Registration Success",
-                    willClose: 200,
-                    icon: "success"
-                })
-                setRegistrationSuccess(true)
-            }
-            reset()
-        console.log(data)
-        }
-        catch(err){
-            console.log(err)
-        }
+    // const verifyOtp=async()=>{
+    //     try {
+    //         const data = await newUser.confirm(otp)
+    //         if(data.user.phoneNumber !== null || data.user.phoneNumber !== ""){
+    //             Swal.fire({
+    //                 title: "Confirm",
+    //                 titleText: "Seller Registration Success",
+    //                 willClose: 200,
+    //                 icon: "success"
+    //             })
+    //             setRegistrationSuccess(true)
+    //         }
+    //         reset()
+    //     console.log(data)
+    //     }
+    //     catch(err){
+    //         console.log(err)
+    //     }
         
-    }
+    // }
     const handleUpdate = () => {
-        alert("update registration")
+       const user = {
+        phoneNumber, password
+       }
     }
     return (
         <div className='px-20 registration flex gap-20 justify-start items-start'>
@@ -57,18 +79,19 @@ const Registration = () => {
                 <h3 className='text-xl'>Set Up Account</h3>
                <div className='flex flex-col justify-center mt-6 gap-4'>
                <div>
-               <input type="password" name="password" id="password" placeholder='Enter a password' />
-               <input type="password" name="confirmpassword" id="confirmpassword" placeholder='Retype your password' />
+                <input type="text" name="name" id="name" onChange={setUserName} placeholder='Enter your name' />
+                <input type="text" name="brand" id="brand" placeholder='Enter your brand name'/>
+                <input type="file" name="image" id="image" placeholder='Upload Image' />
                </div>
                <div>
               <button onClick={handleUpdate} className='btn btn-cta w-full'>Update Account</button>
               </div>
                </div>
-               <div className='w-full grid grid-cols-2 gap-4 mt-8'>
+               {/* <div className='w-full grid grid-cols-2 gap-4 mt-8'>
                <input type="text" name="otp" id="otp" onChange={(e)=>setOtp(e.target.value)} className='rounded-lg'/>
                
-               <button onClick={verifyOtp} className="btn btn-cta" >Verify OTP</button>
-               </div>
+               <button className="btn btn-cta" >Verify OTP</button>
+               </div> */}
                <div className='text-right pr-4 pt-4'>
                <Link to="/newseller/sellerlogin" className='text-blue-600'>Login In</Link>
                </div>
@@ -79,22 +102,21 @@ const Registration = () => {
                 <p className='text-gray-400'>sign up in 2 steps</p>
                <div className='flex flex-col justify-center mt-6 gap-4'>
                <div>
-               <PhoneInput country={"bd"} disableDropdown value={value} onChange={setValue} inputStyle={{width:"100%"}}/>
+               <form onSubmit={handleSubmit}>
+                <input type="email" name="email" id="email" placeholder='Enter Email Address'/>
+                <input type="password" name="password" id="password" placeholder='Enter Password'/>
+                <input type="submit" value="Sign Up" />
+               </form>
   
                <div id='recaptcha' className='w-full mt-5'></div>
              
                </div>
-               <div>
-              <button onClick={handleSubmit} className='btn btn-cta w-full'>Verify With SMS</button>
-              </div>
-               </div>
-               <div className='w-full grid grid-cols-2 gap-4 mt-8'>
-               <input type="text" name="otp" id="otp" onChange={(e)=>setOtp(e.target.value)} className='rounded-lg'/>
-               
-               <button onClick={verifyOtp} className="btn btn-cta" >Verify OTP</button>
+               {/* <div>
+              <button onClick={()=>handleSubmit(e)} className='btn btn-cta w-full'>Sign Up</button>
+              </div> */}
                </div>
                <div className='text-right pr-4 pt-4'>
-               <Link to="/newseller/sellerlogin" className='text-blue-600'>Login In</Link>
+               <Link to="sellerlogin" className='text-blue-600'>Log In</Link>
                </div>
             </div>
             }

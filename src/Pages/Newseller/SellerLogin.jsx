@@ -50,7 +50,7 @@ const SellerLogin = () => {
            <button onClick={verifyOtp} className="btn btn-cta" >Verify OTP</button>
            </div>
            <div className='text-right pr-4 pt-4'>
-           <Link to="registration" className='text-blue-600'>Create a new account</Link>
+           <Link to="/newseller" className='text-blue-600'>Create a new account</Link>
            </div>
         </div>
     </div>

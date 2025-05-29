@@ -20,16 +20,17 @@ const login =(email, password)=>{
 }
 const signUp = (email, password)=>{
     setLoading(true)
-    return createUserWithEmailAndPassword(auth, email, password)
+    const recaptcha = new RecaptchaVerifier(auth, "recaptcha", {})
+    return createUserWithEmailAndPassword(auth, email, password, recaptcha)
 }
 const loggingOut = ()=>{
     setLoading(true);
     return signOut(auth)
 }
-const sellerSignUp = (phoneNumber)=>{
-    const recaptcha = new RecaptchaVerifier(auth, "recaptcha", {})
-    return signInWithPhoneNumber(auth, phoneNumber, recaptcha)
-}
+// const sellerSignUp = (phoneNumber)=>{
+//     const recaptcha = new RecaptchaVerifier(auth, "recaptcha", {})
+//     return signInWithPhoneNumber(auth, phoneNumber, recaptcha)
+// }
 useEffect(()=>{
     const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
         setUser(currentUser)
@@ -39,7 +40,7 @@ useEffect(()=>{
 }, [])
 
 const authInfo = {
-    user,loading, login, signUp, loggingOut, sellerSignUp
+    user,loading, login, signUp, loggingOut
 }
     return (
         <AuthContext.Provider value={authInfo}>

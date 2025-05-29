@@ -6,12 +6,13 @@ const Cart = () => {
     useEffect(() => {
         const cartItems = getCart()
         setCart(cartItems)
-    }, [])
+    }, [localStorage.getItem('cart')])
     
     let items = 0;
     for(let x in cart){
              items += cart[x]        
     } 
+   
     return (
         <div>
             {

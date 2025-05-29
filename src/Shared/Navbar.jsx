@@ -4,6 +4,7 @@ import { getCart } from '../fakedb';
 import { FaBars, FaCartPlus, FaShoppingCart } from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../Providers/AuthProviders';
+import Topbar from './Topbar';
 
 const Navbar = () => {
     const [clicked, setClicked] = useState(false);
@@ -39,7 +40,7 @@ const Navbar = () => {
 
     
     const navOptions = (
-      <ul className='md:flex md:flex-row items-end text-black w-full'>
+      <ul className={clicked?'text-white md:flex md:flex-row items-end w-full':'md:flex md:flex-row items-end text-black w-full'}>
           <Link to='/'><li className='custom md:w-32 h-12 w-full text-center'> Home </li></Link>
           <Link to='/allproducts'><li className='custom md:w-32 h-12 w-full text-center'>Products </li></Link>
           {user?<li onClick={logOut} className='custom md:w-32 h-12 w-full text-center cursor-pointer'>Logout</li>:<Link to='/login'><li className='custom md:w-32 h-12 w-full text-center'>Login</li></Link>}
@@ -58,12 +59,10 @@ const Navbar = () => {
     return (
         <nav>
       <div className='max-[600px]:hidden relative'>
+       
       <div className='flex flex-row justify-between items-center h-24 py-8 px-10 w-full uppercase bg-gradient-to-r from-[#FE5418] via-[#f88204] to-[#f89603] fixed top-0 left-0 right-0 z-50'>
         <div className="py-auto">
-         <div className='flex gap-4 text-white mb-2 ps-4'>
-         <Link to="/newseller"><h5 className='capitalize'>Become a seller</h5></Link>
-         <h5 className='capitalize'>Help & Support</h5>
-         </div>
+         {colorChange?<></>:<Topbar />}
           <Link to="/" className="flex items-center">
           <h3 className="md:text-3xl text-2xl text-white font-extrabold font-['pacifico']">Best <span className='text-violet-700 ps-2'>One</span></h3>
           </Link>

@@ -76,7 +76,6 @@ button:focus-visible {
   @apply text-2xl font-semibold
 }
 .custom{
-    color: black;
     background-size: 200%;
     padding: 0.5rem;
     margin-right: 1px;

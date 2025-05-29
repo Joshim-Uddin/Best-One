@@ -13,6 +13,9 @@ import AddProduct from '../Components/AddProduct';
 import NewSeller from '../Pages/Newseller/NewSeller';
 import Registration from '../Pages/Newseller/Registration';
 import SellerLogin from '../Pages/Newseller/SellerLogin';
+import SupportPage from '../Pages/SupportPage';
+import SellerRoutes from './SellerRoutes';
+import SellerDashboard from '../Pages/Newseller/SellerDashboard';
 
 const router = createBrowserRouter([
     {
@@ -43,6 +46,10 @@ const router = createBrowserRouter([
                 path: '/signup',
                 element: <SignUp />
             },
+            {
+                path: '/support',
+                element: <SupportPage />
+            }
         ]
     },
     {
@@ -66,7 +73,11 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '',
-                element: <AddProduct />
+                element: <SellerRoutes><SellerDashboard /> </SellerRoutes>
+            },
+            {
+                path: 'addproduct',
+                element: <SellerRoutes><AddProduct /> </SellerRoutes>
             }
 
         ]
