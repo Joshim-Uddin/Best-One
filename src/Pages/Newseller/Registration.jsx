@@ -102,10 +102,10 @@ const Registration = () => {
                 <p className='text-gray-400'>sign up in 2 steps</p>
                <div className='flex flex-col justify-center mt-6 gap-4'>
                <div>
-               <form onSubmit={handleSubmit}>
-                <input type="email" name="email" id="email" placeholder='Enter Email Address'/>
-                <input type="password" name="password" id="password" placeholder='Enter Password'/>
-                <input type="submit" value="Sign Up" />
+               <form onSubmit={handleSubmit} className='flex flex-col gap-5'>
+                <input className='rounded-md' type="email" name="email" id="email" placeholder='Enter Email Address'/>
+                <input className='rounded-md' type="password" name="password" id="password" placeholder='Enter Password'/>
+                <input className='rounded-md btn btn-secondary' type="submit" value="Sign Up" />
                </form>
   
                <div id='recaptcha' className='w-full mt-5'></div>
