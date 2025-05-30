@@ -78,7 +78,7 @@ const Registration = () => {
                 <div className='bg-white rounded-xl p-8 w-2/5 mt-10'>
                 <h3 className='text-xl'>Set Up Account</h3>
                <div className='flex flex-col justify-center mt-6 gap-4'>
-               <div>
+               <div className='flex flex-col'>
                 <input type="text" name="name" id="name" onChange={setUserName} placeholder='Enter your name' />
                 <input type="text" name="brand" id="brand" placeholder='Enter your brand name'/>
                 <input type="file" name="image" id="image" placeholder='Upload Image' />
